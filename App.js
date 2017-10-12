@@ -10,13 +10,15 @@ import {
   StyleSheet,
   View,
 } from 'native-base';
-import { Image } from 'react-native';
+import { Image, TouchableWithoutFeedback } from 'react-native';
 import { Col, Row, Grid } from 'react-native-easy-grid';
+import { Actions } from 'react-native-router-flux';
 import { Container, Header, Body, Left, Card, CardItem, Content, Footer, FooterTab, Button, Icon, Text, Title } from 'native-base';
 
-export default class Home extends Component {
+class Home extends React.Component {
   render() {
     return (
+
       <Container>
         <Header> 
       <Body>
@@ -24,7 +26,7 @@ export default class Home extends Component {
       </Body>
         </Header>
         <Content>
-
+          <TouchableWithoutFeedback onPress={Actions.article}>
           <Card>
               <CardItem cardBody style={{borderRadius: 4, overflow: 'hidden'}}>
               <Image source={{uri: 'https://www.damemagazine.com/sites/default/files/styles/feature_wide/public/field/image/happy-baby.jpg?itok=6Ez4tlLV'}} style={{height: 185, width: null, flex: 1}}/>  
@@ -38,7 +40,7 @@ export default class Home extends Component {
               <Text style={{fontSize: 14}}>— By Juliet Scott</Text>
             </CardItem>
          </Card>
-
+        </TouchableWithoutFeedback>
          <Grid>
          <Col>
          <Card>
@@ -91,7 +93,7 @@ export default class Home extends Component {
         <Col>
          <Card>
               <CardItem cardBody style={{borderRadius: 4, overflow: 'hidden'}}>
-              <Image source={{uri: 'https://assets.babycenter.com/ims/2015/12/iStock_21067751_4x3.jpg'}} style={{height: 105, width: null, flex: 1}}/>
+              <Image source={{uri: 'https://media.mnn.com/assets/images/2016/01/stern-baby.jpg.838x0_q80.jpg'}} style={{height: 105, width: null, flex: 1}}/>
             </CardItem>
             <CardItem cardBody>
                 <Text style={{fontSize: 14}}>
@@ -127,3 +129,5 @@ export default class Home extends Component {
     );
   }
 }
+
+export default Home;

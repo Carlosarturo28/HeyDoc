@@ -51,6 +51,8 @@
 		287A3BBFEB6A485591F325E6 /* SofiaProBold.otf in Resources */ = {isa = PBXBuildFile; fileRef = 3E7629317AB2412F8D960CC5 /* SofiaProBold.otf */; };
 		0EE721E885BB43259524C1EF /* SofiaProLightItalic.otf in Resources */ = {isa = PBXBuildFile; fileRef = 7B15645CC8204513A496DBBF /* SofiaProLightItalic.otf */; };
 		7AAEBD62914D4520AA2B6E66 /* SofiaProRegular.otf in Resources */ = {isa = PBXBuildFile; fileRef = 64D15E9998F742829087427F /* SofiaProRegular.otf */; };
+		95870123894B46A8BF389157 /* libRNImagePicker.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 5BD4367577B64B28A0B86CBC /* libRNImagePicker.a */; };
+		65377EE49103417085D27284 /* libRNFetchBlob.a in Frameworks */ = {isa = PBXBuildFile; fileRef = 54A5FEF6F69C467EAB55C1AC /* libRNFetchBlob.a */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXContainerItemProxy section */
@@ -293,6 +295,10 @@
 		3E7629317AB2412F8D960CC5 /* SofiaProBold.otf */ = {isa = PBXFileReference; name = "SofiaProBold.otf"; path = "../assets/fonts/SofiaProBold.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		7B15645CC8204513A496DBBF /* SofiaProLightItalic.otf */ = {isa = PBXFileReference; name = "SofiaProLightItalic.otf"; path = "../assets/fonts/SofiaProLightItalic.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
 		64D15E9998F742829087427F /* SofiaProRegular.otf */ = {isa = PBXFileReference; name = "SofiaProRegular.otf"; path = "../assets/fonts/SofiaProRegular.otf"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = unknown; explicitFileType = undefined; includeInIndex = 0; };
+		25314A0AC47F484BB7CCAF28 /* RNImagePicker.xcodeproj */ = {isa = PBXFileReference; name = "RNImagePicker.xcodeproj"; path = "../node_modules/react-native-image-picker/ios/RNImagePicker.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		5BD4367577B64B28A0B86CBC /* libRNImagePicker.a */ = {isa = PBXFileReference; name = "libRNImagePicker.a"; path = "libRNImagePicker.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
+		6168F8D2F70C436484531EC7 /* RNFetchBlob.xcodeproj */ = {isa = PBXFileReference; name = "RNFetchBlob.xcodeproj"; path = "../node_modules/react-native-fetch-blob/ios/RNFetchBlob.xcodeproj"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = wrapper.pb-project; explicitFileType = undefined; includeInIndex = 0; };
+		54A5FEF6F69C467EAB55C1AC /* libRNFetchBlob.a */ = {isa = PBXFileReference; name = "libRNFetchBlob.a"; path = "libRNFetchBlob.a"; sourceTree = "<group>"; fileEncoding = undefined; lastKnownFileType = archive.ar; explicitFileType = undefined; includeInIndex = 0; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -321,6 +327,8 @@
 				832341BD1AAA6AB300B99B32 /* libRCTText.a in Frameworks */,
 				00C302EA1ABCBA2D00DB3ED1 /* libRCTVibration.a in Frameworks */,
 				139FDEF61B0652A700C62182 /* libRCTWebSocket.a in Frameworks */,
+				95870123894B46A8BF389157 /* libRNImagePicker.a in Frameworks */,
+				65377EE49103417085D27284 /* libRNFetchBlob.a in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
@@ -489,6 +497,8 @@
 				832341B01AAA6A8300B99B32 /* RCTText.xcodeproj */,
 				00C302DF1ABCB9EE00DB3ED1 /* RCTVibration.xcodeproj */,
 				139FDEE61B06529A00C62182 /* RCTWebSocket.xcodeproj */,
+				25314A0AC47F484BB7CCAF28 /* RNImagePicker.xcodeproj */,
+				6168F8D2F70C436484531EC7 /* RNFetchBlob.xcodeproj */,
 			);
 			name = Libraries;
 			sourceTree = "<group>";
@@ -1073,6 +1083,16 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeyDoc.app/HeyDoc";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
+					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
+				);
 			};
 			name = Debug;
 		};
@@ -1090,6 +1110,16 @@
 				);
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeyDoc.app/HeyDoc";
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
+					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
+				);
 			};
 			name = Release;
 		};
@@ -1108,6 +1138,11 @@
 				);
 				PRODUCT_NAME = HeyDoc;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
+					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
+				);
 			};
 			name = Debug;
 		};
@@ -1125,6 +1160,11 @@
 				);
 				PRODUCT_NAME = HeyDoc;
 				VERSIONING_SYSTEM = "apple-generic";
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
+					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
+				);
 			};
 			name = Release;
 		};
@@ -1151,6 +1191,16 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
+					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
+				);
 			};
 			name = Debug;
 		};
@@ -1177,6 +1227,16 @@
 				SDKROOT = appletvos;
 				TARGETED_DEVICE_FAMILY = 3;
 				TVOS_DEPLOYMENT_TARGET = 9.2;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
+				HEADER_SEARCH_PATHS = (
+					"$(inherited)",
+					"$(SRCROOT)/../node_modules/react-native-image-picker/ios",
+					"$(SRCROOT)/../node_modules/react-native-fetch-blob/ios/**",
+				);
 			};
 			name = Release;
 		};
@@ -1198,6 +1258,11 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeyDoc-tvOS.app/HeyDoc-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 			};
 			name = Debug;
 		};
@@ -1219,6 +1284,11 @@
 				SDKROOT = appletvos;
 				TEST_HOST = "$(BUILT_PRODUCTS_DIR)/HeyDoc-tvOS.app/HeyDoc-tvOS";
 				TVOS_DEPLOYMENT_TARGET = 10.1;
+				LIBRARY_SEARCH_PATHS = (
+					"$(inherited)",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+					"\"$(SRCROOT)/$(TARGET_NAME)\"",
+				);
 			};
 			name = Release;
 		};
