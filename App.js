@@ -13,12 +13,15 @@ import {
 import { Image, TouchableWithoutFeedback } from 'react-native';
 import { Col, Row, Grid } from 'react-native-easy-grid';
 import { Actions } from 'react-native-router-flux';
-import { Container, Header, Body, Left, Card, CardItem, Content, Footer, FooterTab, Button, Icon, Text, Title } from 'native-base';
+import getTheme from './native-base-theme/components';
+import { StyleProvider, Container, Header, Body, Left, Card, CardItem, Content, Footer, FooterTab, Button, Icon, Text, Title } from 'native-base';
+import Store from './src/Store';
 
 class Home extends React.Component {
+
   render() {
     return (
-
+<StyleProvider  style={getTheme()}>
       <Container>
         <Header> 
       <Body>
@@ -115,7 +118,7 @@ class Home extends React.Component {
               <Icon name="ios-videocam-outline" />
               <Text>Videochat</Text>
             </Button>
-            <Button vertical>
+            <Button vertical onPress={Actions.routeChat}>
               <Icon name="ios-chatboxes-outline" />
               <Text>Chat</Text>
             </Button>
@@ -126,6 +129,7 @@ class Home extends React.Component {
           </FooterTab>
         </Footer>
       </Container>
+    </StyleProvider>
     );
   }
 }
